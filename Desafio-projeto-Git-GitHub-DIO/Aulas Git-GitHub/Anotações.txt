@@ -1,0 +1,13 @@
+#Anotações Aula GitHub
+
+##Comandos basicos git bash:
+
+-git init: inicia um repositório no diretório em que se encontra
+
+-git add .: Adiciona todas alterações feitas nos arquivos do repositorio localmente
+
+-git commit: Salva todas Alterações 
+
+-git push origin: Sobe os arquivos para o repositório do GitHub
+
+-git clone: clona repositórios do GitHub
