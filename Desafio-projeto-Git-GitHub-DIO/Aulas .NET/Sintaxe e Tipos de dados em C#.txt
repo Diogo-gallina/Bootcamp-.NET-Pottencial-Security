@@ -1,0 +1,118 @@
+#Sintaxe e Identação
+
+##Aula: O conceito de classe 
+
+- Abstração é pegar um objeto do mundo real e passa-lo para o programa
+
+- Uma classe é um conceito representado no mundo real 
+
+- Sintaxe para declarar uma classe: "public, private ou protected" class "nome da classe"{}
+
+- Todo nome de classe começa coma letra maiúscula
+
+- Sintaxe para criar um atributo: "public, private ou protected" "Tipo de dado" "Nome do atributo" {get; set;} 
+EX: public int Idade {get; set;}
+
+- Sintaxe para criar um método: "public, private ou protected" void "Nome do método" 
+EX: public void Apresentar(){}
+
+- Palavras reservadas são comandos ultilizados pela linguagem em questão EX: public, get, set, void, class
+
+
+##Aula: Usando namespaces
+
+- O progam.cs é a main principal do projeto, smp que o projeto for rodado o primeiro arquivo a ser lido será ele
+
+- Sintaxe para instanciar uma classe: "nome da classe" "nome da variavel, que é recomendado se uma abreviação da classe ou o proprio nome" = new "Nome da classe"
+EX: Pessoa p = new Pessoa();
+
+- Para importar uma namespace na main principal é preciso ultilizar a palavra reservada using "namespace que voce irá pegar a classe"
+
+
+##Aula: Explorando a sintaxe
+
+- Todo final de comando deve conter ";"
+
+- Para concatenar no C# deve-se usar a tecla "+"
+
+- Para quebrar uma linha vc deve ultilizar o camando "\n"
+
+
+##Aula: Convenções case
+
+- Convenção é uma maneira de padronizar a codificação sem alterar a funcionalidade ("Boas práticas")
+
+- No C# só é ultilizado o camelCase (Primeira letra minuscula e outros inicios de palavra maiscula) e o 
+PascalCase (Primeira letra maiúscula e todo inicio de palavra com letra maiúscula), não são ultilizado "_" e "-" para separar palavras
+
+-Nome de classe: PascalCase, atributo: PascalCase, métodos: PascalCase, variavel: camelCase
+
+
+##Aula: Convenções Escrita de classe
+
+- Nunca abrevie um atributo
+
+- Nome do arquivo deve ser o mesmo da classe e vice-versa
+
+
+##Aula: Convenções de nome e variavél
+
+- Não é permitido colocar caracteres especiais no nome de uma variavel com excessão do "_"
+
+
+#Tipos de Dados
+
+##Aula: Introdução e tipos inteiros
+
+- Tipos de dados são uma informação que caracteriza o que uma variavel representa
+
+- string: cadeia de caracteres (Texto livre, ou seja aceira letras, numeros, caracteres...)
+
+- char: caracter Unicode 
+
+- bool: valor Booleano (Só aceita verdadeiro ou falso)
+
+- int: valor inteiro (Não aceita casas decimais)
+
+- o int tem variações para alocação de memória como byte, uint, short, ulong
+
+- byte: só aceita numeros de 0 a 255
+
+- long: aceita 9trilhoes de numeros inteiros
+
+- uint: ultiliza apenas números positivos dobrando a capacidade de caracteres do int
+
+- porém essas variações do int não são muito ultilizadas
+
+
+##Aula: Números com casa decimais
+
+- decimal: aceita numeros decimais com até 29 numeros decimais (Ultilizado mais para representar dinheiro)
+
+- float: aceita numeros decimais maiores 32-bits
+
+- double: aceita numeros decimais maiores 64-bits(Mais ultilizados para decimais grandes como cordenadas)
+
+
+##Aula: Declarando os tipos de variáveis
+
+- As casa decimais na programação sempre são separadas com "." não com virgula
+
+- Se você passar um valor direto para um decimal você deve colocar um "M" após o numero para indicar que é aquele numero que sera representado
+
+- O decimal é ultilizado para representar dinheiro pois o double ignora os zeros a direita no console
+
+
+##Aula: O tipo DateTime
+
+- O tipo DateTime é ultilizado para representar datas
+
+- Ctrl + k+ c Comenta as linhas selecionadas do seu código
+
+- DateTime.Now sempre pega a hora atual da maquina que está sendo ultilizada
+
+- para somar datas/horas no datetime é preciso ultilizar um comando após o Now EX: Datetime.Now.AddDays(5) (e ele irá somar 5 dias no seu datetime)
+
+-  Caso você queira representar no seu console apenas a data ou a hora é necessário voce adicionar o formato que você deseja
+EX "Variavel".toString("dd/MM/yyyy" HH:mm)
+
