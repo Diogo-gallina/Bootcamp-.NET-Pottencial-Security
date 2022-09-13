@@ -1,0 +1,159 @@
+
+#OPERADORES DE ATRIBUIÇÃO
+
+##Aula: Introdução operador de atribuição
+
+- O sinal de = serve para você atribuir um valor a uma variavel 
+
+
+##Aula: Convertendo tipos de variaveis
+
+- Para atribuir um valor a uma variavel elas precisam ser do mesmo tipo
+
+- Casting é um trabalho de conversão de uma variálvel para outro tipo de variável
+
+- tem como fazer o Casting com "Convert.'tipo de dado'" 
+EX int a = Convert.ToInt32("5"); 
+
+- tambem tem como converter com o comando Parse
+EX: int a = int.Parse("5"); 
+
+
+##Aula: Diferença entre Convert e Parse
+
+- A diferença principal é o tratamento de valores nulos, o Convert diferente do Parse aceita valores nulos
+
+- De preferencia use o Convert, pois é muito comum os valores virem vazios, assim evitando erros no seu programa
+
+
+##Aula: Conversão para string
+
+- Para converter valores inteiros para string, devese usar o comando ".ToString()"
+EX:
+int inteiro = 5;
+string a = inteiro.ToString();
+
+
+##Aula: Cast implicito
+
+- Cast implicito é uma conversão de diferentes tipos que não é preciso usar a conversão, pois el´ á feita automaticamente
+
+- Um exemplo de cast implicito é uma conversão de int para double, pois os valores de um int cabem no double ou seja, tem uma conversão feita automaticamente
+
+
+##Aula: Ordem dos operadores
+
+- Assim como na matemática, a ordem dos operadores no C# é igual, ou seja:
+parenteses -> expoente -> divisão e multiplicação -> adição e subtração
+
+
+##Aula: Convertendo de maneira segura
+
+- Caso não seja possivel fazer alguma conversão de string para it por conta do int ser invalido, use o comando "TryParse"
+
+- O TryParse tem consciência de que a conversão pode dar erro, então você passa o valor da variavel a ser convertida e uma variavel de saida 
+para que caso ocorra um erro o programa continue rodando 
+EX:
+string a = "15-";
+int b = 0;
+
+int.TryParse(a, out b);
+
+
+
+#OPERADORES CONDICIONAIS
+
+##Aula: Introdução operadores condicionais
+
+- O operador condicional possibilita mudar o fluxo de execução de seu código, indicando um caminho que ele deve seguir
+
+
+##Aula: Operador condicional na prática 
+
+- Syntaxe if: if("1ª variavel" "condição" "2ª variavel"){}
+EX:
+if(Quantidade Estoque >= quantidadeCompra)
+{
+   Console.WriteLine("Venda realizada");
+}
+else
+{
+   Console.WriteLine("Desculpe. Não temos a quantidade desejada em estoque.");
+}
+
+
+##Aula: Debugando o operador condicional
+
+- Para debugar o código no vsCode é só apertar a tecla "f5"
+
+- o Debug analiza o código linha por linha até a pausa que você colocou e após´essa pausa é só apertar f10 que vc vai 
+passando uma linha de cada vez
+
+
+##Aula: if aninhado
+
+- É quando o if tem varias condições possiveis
+
+- para fazer isso deve-se adicionar um else if para mais uma condição
+Syntaxe:
+if("1ª variavel" "condição" "2ª variavel")
+{
+}
+else if("1ª variavel" "condição" "2ª variavel")
+{
+}
+else
+{
+}
+
+
+##Aula: Aprendendo o switch case
+
+- Um case é uma estrutura condicional melhora para uma verificação com muitas condições possiveis
+
+- Comando para o usuário digitar algo: Console.ReadLine()
+
+- || = or
+
+- Exemplo de swich case
+EX:
+switch (letra)
+{
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        Console.WriteLine("Vogal");
+        break;
+    
+    default:
+        Console.WriteLine("Não é Vogal");
+        break;
+}
+
+
+#OPERADORES LÓGICOS
+
+##Introdução Operadores lógicos
+
+- É ultilizado para verificar uma condição 
+
+- Operadores lógicos: || = or, && = e, ! = Not 
+
+
+##Introdução Operador Or
+
+- O operador or é verdadeiro caso qualquer uma das condições for verdadeira
+
+
+##Introdução Operador AND
+
+- O operador and só é verdadeiro se todas condições forem verdadeiras
+
+
+##Introdução Operador NOT
+
+- O operador not inverte um valor booleano, caso seja verdadeiro ele se torna falso, e caso seja falso virá verdadeiro
+
+
