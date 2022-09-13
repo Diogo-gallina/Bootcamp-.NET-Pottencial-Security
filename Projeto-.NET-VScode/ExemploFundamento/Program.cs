@@ -1,6 +1,143 @@
 ﻿using ExemploFundamento.Models;
 
 
+//CONSTRUINDO MENU INTERATIVO
+
+
+string opcao;
+bool exibirMenu = true; 
+
+while(exibirMenu)
+{
+    Console.Clear();
+    Console.WriteLine("Digite a sua opção: ");
+    Console.WriteLine("1 - Cadastrar cliente ");
+    Console.WriteLine("2 - Buscar cliente ");
+    Console.WriteLine("3 - Apagar cliente ");
+    Console.WriteLine("4 - Encerrar ");
+
+    opcao = Console.ReadLine();
+
+    switch(opcao)
+    {
+        case "1":
+            Console.WriteLine("Cadastrar cliente ");
+            break;
+
+        case "2":
+            Console.WriteLine("Buscar cliente ");
+            break;
+
+        case "3":
+            Console.WriteLine("apagar cliente ");
+            break;
+
+        case "4":
+            Console.WriteLine(" Encerrar");
+            exibirMenu = false;
+            break;     
+
+        default:
+            Console.WriteLine("Oção inválida!");    
+            break;   
+
+
+    }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//DO WHILE
+
+// int soma = 0, numero = 0;
+
+// do
+// {
+//     Console.WriteLine("Digite um número (0 para o programa): ");
+//     numero = Convert.ToInt32(Console.ReadLine());
+
+//     soma += numero;
+
+// } while(numero != 0);
+
+// Console.WriteLine($"Total da soma dos numeros digitados é: {soma}");
+
+
+
+
+
+
+
+//WHILE
+
+
+// int numero = 5;
+// int contador = 0;
+
+// while(contador <= 10)
+// {
+//     Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+//     contador++;
+
+//     if(contador == 6)
+//     {
+//         break;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FOR
+
+
+// int numero = 5;
+
+
+// for(int contador = 0; contador <= 10; contador++)
+// {
+//     Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+// }
+
+
+
+
+
+
+
+
+
+
+
+//OPERADORES ARITIMÉTICOS E CLASSE MATH (CALCULADORA)
+
+
+
 //Calculadora calc = new Calculadora();
 
 // // calc.Somar(10, 30);
@@ -12,6 +149,13 @@
 // calc.Coseno(30);
 // calc.Tangente(30);
 //calc.RaizQuadrada(9);
+
+
+
+
+
+
+// INCREMENTO / DECREMENTO
 
 
 // int numeroIncremento = 10;
@@ -28,6 +172,9 @@
 // numeroDecremento--;
 
 // Console.WriteLine(numeroDecremento);
+
+
+
 
 
 
@@ -90,6 +237,8 @@
 
 
 
+//SWITCH CASE
+
 
 // Console.WriteLine("Digite uma letra: ");
 // string letra = Console.ReadLine();
@@ -108,6 +257,8 @@
 //         Console.WriteLine("Não é Vogal");
 //         break;
 // }
+
+
 
 
 
@@ -144,6 +295,8 @@
 
 
 
+
+// IF, ELSE e ELSE IF
 
 
 // int quantidadeEstoque = 3;
@@ -255,6 +408,9 @@
 // Console.WriteLine(altura.ToString("0.00"));
 // Console.WriteLine(preco);
 // Console.WriteLine(condicao);
+
+
+//INSTANCIANDO CLASSE PESSOA
 
 // Pessoa pessoa1 = new Pessoa();
 

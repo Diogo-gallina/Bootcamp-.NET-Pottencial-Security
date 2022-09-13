@@ -1,0 +1,77 @@
+
+#ESTRUTURAS DE REPETIÇÃO	
+
+##Introdução estrutura de repetição
+
+- Uma estrutura de repetição é quando é aplicada uma condição que é repetida até a condição se tornar falsa 
+
+
+##Introdução ao for
+
+- Syntaxe for: for("declaração de variavel"; "Condição"; "Incremento"){}
+EX:
+for(int contador = 0; contador <= 10; contador++){}
+
+
+##Introdução ao while
+
+- O while significa enquanto, ou seja enquanto a condição for verdadeira ele repete o código
+
+- Porém o while não tem um contador na syntaxe, então você deve adicionar um contador para não colocar uma condição que 
+deixará seu programa em um looping infinito
+
+- Syntaxe While: while("condição"){}
+EX:
+while(contador <= 10)
+{
+    Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+    contador++;
+}
+
+- Para parar o terminal você deve apertar as teclas "Ctrl"+"C"
+
+
+##Interrompendo o fluxo de execução
+
+- Também é possivel interromper o fluxo antes do fim de sua execução, para isso ultilizamos o comando break que faz o laço
+terminar até mesmo antes de sua condição se tornar falsa 
+
+- EX:
+while(contador <= 10)
+{
+    Console.WriteLine($"{numero} x {contador} = {numero * contador}");
+    contador++;
+
+    if(contador == 6)
+    {
+        break;
+    }
+}
+
+
+
+##Introdução ao do while
+
+- O Do While é uma variação do While porém a sua execução é feita no final do código e o bloco 
+Do executa seu codigo independente do laço
+
+- Syntaxe:
+do
+{
+
+} while("Condição");
+
+- "!=" = diferente
+
+
+##Construindo um menu interativo
+
+- Environment.Exit(0); é um comando para encerrar a execução do programa
+
+- Console.Clear(); - Comando para limpar a tela do console
+
+
+##refatorando o menu
+
+- Para refatorar o código e não encerrar completamente o programa como o comando "Environment.Exit(0);" você pode criar uma
+variável booleana verdadeira, e quando quiser encerrar o programa coloca-lá como falsa
