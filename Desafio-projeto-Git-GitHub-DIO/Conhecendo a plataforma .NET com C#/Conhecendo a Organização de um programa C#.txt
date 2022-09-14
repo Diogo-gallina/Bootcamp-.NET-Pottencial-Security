@@ -1,0 +1,34 @@
+
+#ESTRUTURA DE UM PROGRAMA E MÉTODO PRINCIPAL
+
+##Estrutura de um programa C#
+
+- .csproj: Contém informações referente a um projeto especifico (build, debug, versão)
+
+- .sln: Contém informações de um agrupamento de projetos
+
+- É uma boa prática criar um projeto para adicionar classes em comum que podem ter em outros projetos
+
+
+##Criando nosso novo projeto
+
+- Um projeto que só contem classe é do tipo Biblioteca de classes
+
+
+##Criando um projeto em NET5 e NET6
+
+- O método main é a classe principal de um projeto
+
+- para criar um projeto com uma versão mais antiga do .NET é só ultilizar o seguinte coamdo:
+dotnet new console --framework net5.0 (Versão desejada)
+
+- Quando você cria um projeto sem especificar a versão, automáticamente ele baixa a versão mais atual
+
+
+##Comparando NET5 e NET6
+
+- Nas versões anteriores do .NET6 a classe principal, é referenciada a partir do método main
+
+- Na versão .NET6 o main ainda existe, porém escondido, ou seja não é necessário implementar o codigo dentro de um método main
+
+
