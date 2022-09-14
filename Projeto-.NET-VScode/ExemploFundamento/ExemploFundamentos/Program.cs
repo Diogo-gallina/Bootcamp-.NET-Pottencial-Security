@@ -1,11 +1,88 @@
-﻿using ExemploFundamento.Common.Models;
+﻿// //using ExemploFundamento.Common.Models;
 
-Pessoa pessoa1 = new Pessoa();
+//LISTA
+
+List <string> listaString = new List<string>();
+
+listaString.Add("SP");
+listaString.Add("BA");
+listaString.Add("MG");
+listaString.Add("RJ");
+
+Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
+
+listaString.Add("SC");
+
+Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
+
+listaString.Remove("MG");
+
+Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
+
+
+// for(int contador = 0; contador < listaString.Count; contador++)
+// {
+//     Console.WriteLine($"Posição N° {contador} - {listaString[contador]}");
+// }
+
+// Console.WriteLine($"Percorrendo array com foreach");
+
+// int contadorForeach = 0;
+// foreach(string item in listaString)
+// {
+//     Console.WriteLine($"Posição N° {contadorForeach} - {item}");
+//     contadorForeach++;
+// }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// //ARRAY
+
+// int[] arrayInteiros = new int[3];
+
+// arrayInteiros[0] = 72;
+// arrayInteiros[1] = 64;
+// arrayInteiros[2] = 50;
+
+
+// //COPIANDO ARRAY, MESMA EXECUÇÃO DO RESIZE, POREM ESSA CRIA UMA NOVA VARIAVEL, JÁ O RESIZE CRIA UM NOVO ARRAY E TE DEVOLVE COM O MESMO NOME
+// // int[] arrayInteirosDobrado = new int[arrayInteiros.Length * 2];
+// // Array.Copy(arrayInteiros, arrayInteirosDobrado, arrayInteiros.Length);
+
+// //REDIMENSIONANDO ARRAY
+// //Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2);
+
+// //Percorrendo o array com o for
+// // for(int contador = 0; contador < arrayInteiros.Length; contador++);
+// // {
+// //     Console.WriteLine($"Posição n° {contador} - {arrayInteiros[contador]}");
+// // }
+
+// //Console.WriteLine($"Percorrendo array com foreach");
+
+// //Percorrendo o array com o foreach
+
+// int contadorForeach = 0;
+
+// foreach(int valor in arrayInteiros)
+// {
+//     Console.WriteLine($"Posição n° {contadorForeach} - {valor}");
+//     contadorForeach++;
+// }
 
 
 

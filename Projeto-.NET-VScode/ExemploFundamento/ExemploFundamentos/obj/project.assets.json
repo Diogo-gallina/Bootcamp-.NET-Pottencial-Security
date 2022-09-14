@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\workspace\\Bootcamp-.NET-Pottencial-Security\\Projeto-.NET-VScode\\ExemploFundamento\\ExemploFundamento.csproj",
+      "projectUniqueName": "C:\\workspace\\Bootcamp-.NET-Pottencial-Security\\Projeto-.NET-VScode\\ExemploFundamento\\ExemploFundamentos\\ExemploFundamento.csproj",
       "projectName": "ExemploFundamento",
-      "projectPath": "C:\\workspace\\Bootcamp-.NET-Pottencial-Security\\Projeto-.NET-VScode\\ExemploFundamento\\ExemploFundamento.csproj",
+      "projectPath": "C:\\workspace\\Bootcamp-.NET-Pottencial-Security\\Projeto-.NET-VScode\\ExemploFundamento\\ExemploFundamentos\\ExemploFundamento.csproj",
       "packagesPath": "C:\\Users\\55119\\.nuget\\packages\\",
-      "outputPath": "C:\\workspace\\Bootcamp-.NET-Pottencial-Security\\Projeto-.NET-VScode\\ExemploFundamento\\obj\\",
+      "outputPath": "C:\\workspace\\Bootcamp-.NET-Pottencial-Security\\Projeto-.NET-VScode\\ExemploFundamento\\ExemploFundamentos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\55119\\AppData\\Roaming\\NuGet\\NuGet.Config",
