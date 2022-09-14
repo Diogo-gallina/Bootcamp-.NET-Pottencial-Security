@@ -1,23 +1,44 @@
 ﻿// //using ExemploFundamento.Common.Models;
 
+//Instância classe pessoa
+Pessoa p = new Pessoa();
+
+/*
+ Atribui o nome e idade para pessoa
+ Passando o Nome Buta
+ e passando a idade 20
+*/
+p.Nome ="Buta";
+p.Idade = 20;
+
+//Faz a pessoa se apresentar
+p.Apresentar();
+
+
+
+
+
+
+
+
 //LISTA
 
-List <string> listaString = new List<string>();
+// List <string> listaString = new List<string>();
 
-listaString.Add("SP");
-listaString.Add("BA");
-listaString.Add("MG");
-listaString.Add("RJ");
+// listaString.Add("SP");
+// listaString.Add("BA");
+// listaString.Add("MG");
+// listaString.Add("RJ");
 
-Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
+// Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
 
-listaString.Add("SC");
+// listaString.Add("SC");
 
-Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
+// Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
 
-listaString.Remove("MG");
+// listaString.Remove("MG");
 
-Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
+// Console.WriteLine($"Itens na minha lista: {listaString.Count} - Capacidade {listaString.Capacity}");
 
 
 // for(int contador = 0; contador < listaString.Count; contador++)
