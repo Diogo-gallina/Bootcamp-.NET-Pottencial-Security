@@ -1,0 +1,107 @@
+#Propriedades,métodos e construtores
+
+
+##Introdução Propriedades
+
+- Uma propriedade é um membro que oferece um mecanismo flexível para ler, gravar ou calcular o valor de um campo particular
+
+##Propriedade na pratica
+
+- Para criar uma propriedade em uma classe, basta você escrever "prop" e apertar a tecla tab, após isso alterar o nome e o tipo de dado
+se necessário
+
+
+##Validações no GET e SET
+
+- Encapsulamento consiste em proteger seus atributos de modificações externas a não ser que passe por uma validação 
+
+- value é o argumento que recebe o valor da propriedade
+
+- throw new ArgumentException(""); é uma excessão de argumento (erro) que caso sua condição seja verdadeira ele para o código
+e retorna um erro ao usuário
+
+- .ToUpper() é um método que retorna a propriedade com todas as letras maiúsculas
+
+
+##Body Expressions
+
+- Da para resumir o seu código com Body Expressiosn deixando seus códigos mais limpos
+
+- As Body Expressiosns são usadas apenas em códigos de uma linha 
+
+- Para ultiliza-lá basta usar a expressão "=>"
+
+
+##Modificadores de acesso
+
+- public não tem restrições de acesso, é posivel acessar de todas partes do código
+
+- private só pode ser acessado de dentro da própria classe
+
+
+##Propriedades somente leitura
+
+- Propriedades de leitura são propriedades que você não pode inserir umvalor apenas representa-lo, ou seja uma propriedade 
+apenas com get
+
+
+##Introdução métodos
+
+- Um método é um bloco de código que contém uma série de instruções e pode ser reaproveitado em varias partes do código
+
+
+##Implementando a classe curso
+
+- Para aplicar uma propriedade do tipo coleção(Lista) deve-se seguir a syntaxe: 
+"public List<NomeDalista> NomeDaPropriedade { get; set; }"
+
+- Quando existe um método que não é necessário ter um retorno, é ultilizado o tipo de método "void" que em português é vazio
+
+
+##Tipos de retorno
+
+- Se você criar um método com tipo de dado diferente de void, é obrigatorio o método ter um return
+
+
+##Trabalhando com construtores
+
+- Os construtores permitem que o programador defina valores padrão, limite a instanciação e grave códigos flexíveis e fáceis de ler
+
+- Syntaxe do método construtor: public or privite "nome do construtor"(){}
+EX
+public Pessoa()
+{}
+
+- Todo construtor tem o nome o nome de sua classe
+
+- O método construtor não tem nenhum tipo de retorno, nem mesmo vazio
+
+- O construtor pode receber parametros ou vazio
+
+- Para instânciar um construtor é obrigatório que as instâncias possuam os mesmos parametros do construtor
+
+- Uma classe pode ter varios construtores
+
+- O construtor ajuda a economizar linhas de código quando se instancia uma classe, pois você pode passar os parametros direto no new, ao invés de ter que chamar
+um parametro de cada vez
+EX:
+Pessoa p1 = new Pessoa("Leonardo", "Buta");
+
+##Implementando construtor
+
+- Para implementar um construtor você deve atribuir o valor das variaveis na propriedade em questão 
+Syntaxe:
+public Pessoa(string varialvel)
+        {
+            "Propriedade" = "Variavel"
+        }
+
+EX:
+public Pessoa(string nome)
+        {
+            Nome = nome;
+        }
+
+- Para não confundir o seu código, ao instanciar sua classe e passar os parâmetros sempre coloque o nome que cada parâmetro representa
+
+

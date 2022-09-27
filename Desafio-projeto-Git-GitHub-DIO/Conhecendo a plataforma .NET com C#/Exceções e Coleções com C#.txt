@@ -1,0 +1,139 @@
+#Exceções e Coleções com C#
+
+##Introdução Exceções
+
+- Exceções são mais conhecidas como exceptions
+
+- Os recursos de manipulação de excessão da linguagem C# ajudam você a lidar com quaisquer situações excepcionais ou inesperadas
+que ocorram quando um programa for executado.
+
+
+##Realizando a leitura de um arquivo
+
+- Para realizar a leitura de um arquivo em C#, é ultilizado um array atribuindo a classe File com o Método ReadAllLines
+
+- Syntaxe: string[] linhas = File.ReadAllLines("Diretótio do arquivo");
+
+
+##Disparando uma excessão
+
+- Uma excessão é quando o programa não tem mais saída, quando ele tenta fazer o que ele foi programado, porém alguma condição 
+externa o impediu de continuar, assim ele encerra o programa
+
+- Quando um programa da uma excessão ele joga a responsabilidade pra você, detalhando como chegou no erro e 
+dando dicas de onde resolver o roblema
+
+
+##Tratando uma exceção
+
+- Para previnir uma excessão é usado o try catch
+
+- Syntaxe try catch: 
+try
+{
+"Bloco de código"
+} catch(Exception "variavel")
+{
+"tratamento: "
+    Console.WriteLine($"Ocorreu uma excessão Generica. {"variavel".Message}");
+}
+
+- .Message fala qual é a excessão em questão
+
+
+##Exceção generica e especifica
+
+- uma excessão generica é uma exceção que não tem detalha especificamente o erro, apenas diz que ocorreu um erro
+
+- Já uma exceção especifica diz exatamente qual é o erro e você trata direta,mente ele, colocando condições caso ocorra cada erro especifico
+
+
+##entendendo o bloco finally
+
+- Este bloco de código vem logo após os tratamentos catch 
+
+- O finally serve para executar um bloco de código independente de que ocorra uma exceção 
+
+
+##Introdução a Filas
+
+-  Fila/Queue é um tipo de coleção
+
+- A regra de uma fila é que o primeiro elemento a entrar vair ser o primeiro a sair, e o ultimo a entrar vai ser o ultimo a sair
+
+
+##Fila na prática
+
+- Syntaxe Fila: Queue<"Tipo de dado"> "variavel" = new Queue<"Tipo de dado">();
+
+- fila.Enqueue() adiciona um elemento ao final da fila
+
+- Para percorrer uma fila você ultiliza os mesmos meios de percorrer um array(for/foreach)
+
+- fila.Dequeue(); remove o primeiro elemento da fila
+
+
+##Introdução a Pilhas
+
+- Pilha também é conhecido como stack
+
+- A pilha é como o contrario da fila
+
+- O ultimo elemento a entrar na pilha é o primeiro a sair
+
+
+##Pilha na prática
+
+- Syntaxe Pilha: Stack<"Tipo de dado"> "variavel" = new Stack<"Tipo de dado">();
+
+- "variavel".Push() adiciona um elemento no topo da Pilha
+
+- Para percorrer uma pilha você ultiliza os mesmos meios de percorrer um array(for/foreach)
+
+-Pilha.pop() remove o ultimo elemento da pilha e retorna o elemento removido
+
+
+##Introdução ao Dictionary
+
+- Dictionary é uma coleção de chave-valor para armazenar valores únicos sem uma ordem especifica
+
+- Syntaxe Dictionary: Dictionary<"Tipo de dado 1","Tipo de dado 2"> "variavel" = new Dictionary<"Tipo de dado 1","Tipo de dado 2">();
+
+- O primeiro elemento é uma chave e o segundo é o valor
+
+- O primeiro elemento é unico, caso seja repetido o programa dará uma excessão
+
+- Para percorrer um dictionary no foreach você deve usar as palavras reservadas KeyValuePair<"Tipo de dado 1","Tipo de dado 2">
+ou var
+EX:
+foreach(KeyValuePair<string,string> item in "variavel")
+{
+}
+
+foreach(var item in "variavel")
+{
+}
+
+- Para representar um dictionary no console você deve separar a chave dos valores no foreach
+EX:
+Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+
+- O dictionary garante que seus elementos sejam unicos de acordo com a chave, ou seja, se o usuário tentar adicionar um item 
+já existente o dictionary ve se a chave já existe, caso já exista ele irá disparar uma exceção
+
+
+##Removendo e altrerando elementos do Dictionay
+
+- "variavel".Remove("Chave") - remove um elemento 
+
+- "variavel"["Chave"] = "Alteração do valor" - altera o valor de um elemento 
+
+- .ContainsKey serve para verificar se uma chave já existe
+
+- Para obter o valor de uma chave basta você imprimir o nome do dictionary e em colchetes a chave
+EX:
+Console.WriteLine(variavel["Chave"]);
+
+
+
+

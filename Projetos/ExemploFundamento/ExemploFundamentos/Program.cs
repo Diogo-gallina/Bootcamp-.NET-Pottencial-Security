@@ -1,18 +1,29 @@
 ﻿// //using ExemploFundamento.Common.Models;
 
+
+
+
+
+
+
+
+
+
+
+
 //Instância classe pessoa
-Pessoa p = new Pessoa();
+// Pessoa p = new Pessoa();
 
 /*
  Atribui o nome e idade para pessoa
  Passando o Nome Buta
  e passando a idade 20
 */
-p.Nome ="Buta";
-p.Idade = 20;
+// p.Nome ="Buta";
+// p.Idade = 20;
 
 //Faz a pessoa se apresentar
-p.Apresentar();
+// p.Apresentar();
 
 
 

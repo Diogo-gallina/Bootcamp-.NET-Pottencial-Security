@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "Nome_Produto": "Material de escriótio",
+    "Preco": 25.00,
+    "DataVenda": "2022-09-26T00:46:32.0634073-03:00",
+    "Desconto" : null
+  },
+  {
+    "Id": 2,
+    "Nome_Produto": "Licença de Software",
+    "Preco": 110.00,
+    "DataVenda": "2022-09-26T00:46:32.0634073-03:00",
+    "Desconto" : 10.00
+  }
+]

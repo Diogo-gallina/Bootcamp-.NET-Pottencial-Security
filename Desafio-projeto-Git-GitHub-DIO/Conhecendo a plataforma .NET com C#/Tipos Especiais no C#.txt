@@ -1,0 +1,106 @@
+#Tipos Especiais no C#
+
+
+##Introdução e tipos de valores nulos (Nullable)
+
+- Um tipo de valor nulo (Nullable) permite representar o tipo de variavel e adicionamlmente, o valor nulo
+
+- A syntaxe se baseia em colocar o caractere "?" após escrver o tipo de dado
+EX:
+bool variavel: true/false
+bool? variavel: true/false/null
+
+- null pode representar dados que ainda não foram obtidos, ou um valor vazio 
+
+
+##Tipos nulos na prática
+
+- .HasValue verifica se a variavel tem algum valor diferente de nulo
+
+- .Value é o valor da variavel
+
+-  Quando está e trabalhando com tipos nulos devese verificar se a variavel tem valor com HasValue, caso contrário o programa 
+retornara uma exceção
+
+- (desejaReceberEmail.HasValue && desejaReceberEmail.Value) validação para ver se uma variavel booleana tem valor null e se
+o valor é verdadeiro
+
+- Outra opção de verificação sem ser o HasValue é verificar dirtamente se a variavel é diferente de nulo
+EX:
+"variavel" != null
+
+
+##Tipos nulos em propriedades
+
+- Caso você receba um arquivo .JSON com algum valores nulos, você deve declarar as Propriedades com "?"
+
+
+##Tipos anônimos
+
+- Os tipos anonimos fornecem um modo conveniente de encapsular propriedades somente leitura
+
+- Um tipo é uma variavel que representa alguns valores de somente leiturar
+
+- Após você colocar sua propriedade dentro de um tipo anonimo, ele se torna apenas de leitura(get)
+
+
+##Tipos anonimos em coleção
+
+Syntaxe para escolher apenas informações desejadas de um arquivo json:
+var listaAnonimo = listaVenda.Select(x => new {x.Produto, x.Preco});
+
+*Select cria um objeto anonimo e seleciona apenas os dados escolhidos
+*O x representa um elemento da sua lista~
+
+- O uso é comum quando você vai representar listas, e quando você deseja buscar apenas algumas informações do banco
+
+
+##Tipo dinâmico (Dynamic)
+
+- É um tipo de variavel especial que permite você alterar o tipo de uma variavel conforme você vai atribuido um valor para ela
+
+- .GetType() representa qual é o tipo da variavel dinamica
+
+- Uma desvantagem da variavel dinamica é que tem chances de você se confudir com o formato dela no meio do código ocasionando
+exceções
+
+
+##Introdução classes genericas
+
+- As classes genericas encapsulam operações que não são específicas de um determinado tipo de dado
+
+- Uma classe normal só aceita array de apenas um tipo de dado, e caso queira criar outro array com outro tipo de dado é necessário
+criar outra classe. Para isso que serve a classe generica, pois ela é independente do tipo de dado
+
+##Criando uma classe generica
+
+- Para criar uma classe generia basta colocar "<T>" logo após o nome da classe
+EX:
+public class MeuArray<T>{}
+
+- Esse T substituirá o tipo de dado do array
+
+
+##Testaando nossa classe generica
+
+- Syntaxe para instanciar uma classe generica: MeuArray<"Tipo de dado que você escolher"> arrayInteiro = new MeuArray<"Tipo de dado que você escolher">();
+
+- Sempre que uma classe tiver o sinal de maior e menor "<>" você deve passar um tipo pois é uma classe generica
+
+
+##Métodos de extensão
+
+- Os métodos de extensão permitem que você "adicione" tipo existentes sem criar um novo tipo derivado, reecompilar ou 
+caso contrário, modificar o tipo original
+
+- Um método de extensão sempre tem static, pois ele não será instanciado
+
+- Syntaxe: public static "Tipo de dado" NomeDoMetodo(this "tipo de dado" variavel){}
+
+
+
+
+
+
+
+
