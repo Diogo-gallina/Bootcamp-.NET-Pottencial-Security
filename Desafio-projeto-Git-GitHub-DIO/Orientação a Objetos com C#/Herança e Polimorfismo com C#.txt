@@ -1,0 +1,44 @@
+#Herança e Polimorfismo com C#
+
+
+##Introdução Herança
+
+- A herança nos permite reutilizar atributos, métodos e comportamentos de uma classe em outras classes
+
+- Serve para arupar objetos que são do mesmo tipo, porém com caracteristicas diferentes
+
+- Syntaxe herança: 
+public class "Classe" : "Classe que você quer herdar"
+
+
+##Considerações finais
+
+- Não é possivel herdar mais de uma classe de uma vez, ou seja, uma classe só pode ter uma herança (No C#)
+
+- O unico modo de fazer multiplas heranças no C# é herdando uma classe que já tem uma herança, assim você tera as duas classes sendo herdadas na que você deseja.
+Porém isso não é recomendado, pois cria uma dependencia no seu código, dando mais margens para erros.
+
+
+##Introdução Polimorfismo 
+
+- O polimorfismo significa "Muitas formas"
+
+- Com o polimorfismo na POO(Polimorfismo em tempo de execução), podemos sobrescrever métodos das classes filhas para que se
+comportem de maneira diferente e ter sua própria implementação.
+
+- Para sobrescrever um método, o primeiro passo é ultilizar a palavra reservada "virtual" na declaração do método na classe pai,
+pois o virtual permite a classe filha sobrescrever o método se desejar
+EX:
+public virtual void apresentar()
+
+- O segundo passo é você sobrescrever na classe filha ultilizando a palavra reservada "override" e selecionando o método que 
+deseja alterar
+EX:
+public override void "método que deseja alterar"()
+
+- Também existe o polimorfismo em tempo de compilação que consiste em ter metódos com os mesmos nomes, porém com parametros 
+diferentes, ou seja, caso você chame os parametros de um método ele será executado, caso passe o do outro metodo o outro 
+será executado
+
+
+

@@ -1,0 +1,76 @@
+#Classes Abstratas e Interfaces com C#
+
+##Introdução calsse Abstrata
+
+- Uma classe abstrata tem como objetivo ser exclusivamente um modelo para ser herdado, portanto não pode ser instanciada
+
+- Syntaxe para criar uma classe abstrata:
+public abstract class "Nome da classe"{}
+
+- Protected protege de alterações externas e da acesso somente as classes filhas
+
+- Um método abstrato não tem uma implementação e nem corpo
+
+- Todo método abstrato é obrigatório a ser implementado
+
+
+##Construtor por herança
+
+- Para criar um construtor que funcione em heranças é necessário criar o construtor na classe pai e adaptar nas classe filhas 
+
+- Syntaxe construtor em classes filhas:
+public "nome da classe"(parametros) : base(nome dos parametrs que é passado para a classe pai)
+
+EX:
+public Aluno(string nome) : base(nome)
+
+- Para o parametro não se tornar obrigatório na classe filha, basta você criar um método contrutor vazio na classe pai e filha
+
+
+##Introdução classe selada
+
+- Uma classe selada tem como objetivo impedir que outras classe façam herança dela
+
+- A classe selada proibi ser uma classe pai
+
+- Ou seja, é um ponto final de uma herança
+
+- Tambem existe o método selado, que bloqueia sobrescritas do método
+
+- Syntaxe para selar uma classe: 
+public sealed class "Nome da classe" : "Classe que está sendo herdada"{}
+
+- Syntaxe método selado:
+public sealed void "Nome do método"()
+
+
+##Introdução classe object
+
+- A classe System.Object é a mãe de todas as classes na hieraquia do .NET
+
+- Todas as classes derivam direta ou indiretamente da classe object, e ela tem como objetivo prover serviços de baixo nivel 
+para suas classes filhas 
+
+
+##Introdução interfaces
+
+- Uma interface é um contrato que pode ser implementado por uma classe
+
+- É como se fosse uma classe abstrata, podendo definir métodos abstratos para serem implementados
+
+- Uma interface não pode ser instanciada
+
+-  O nome de uma interface sempre começa com i 
+EX: ICalculadora
+
+- quando se trata de uma interface, não existe heranças e sim implementações
+
+- Tudo o que você implementar na sua interface deve obrigatoriamente ser implementado nas classes que estão tendo a 
+implementação
+
+- Uma interface não tem acessores(public, private, protected), pois por padrão todos são publicos
+
+- Para implementar uma interface segue-se a mesma sintaxe da herança, porém deve conter o importe da interface na classe 
+desejada
+
+- Métodos sem corpo são obrigatórios em uma implementação e métodos com corpo são opcionais

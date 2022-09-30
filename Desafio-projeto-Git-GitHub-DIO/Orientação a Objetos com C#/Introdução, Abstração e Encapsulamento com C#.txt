@@ -1,0 +1,76 @@
+#Introdução, Abstração e Encapsulamento com C#
+
+##Introdução POO
+
+- A POO é um paradigma de programação, ou seja, corresponde a uma tecnica de programação para um fim especifico
+
+- Pilares da POO:
+* Abstração
+* Encapsulamento
+* Herança 	
+* Polimorfismo
+
+- Classe é uma representação de um objeto da vida real
+
+- Objeto é a implementação classe 
+
+
+##Tipos de paradigma
+
+- Um paradigma é um modelo de tecnicas, estruturas e formas de solucionar um problema
+
+- Paradigma de programação é diferente de linguagem de programação
+
+- Uma linguagem de programação implementa um ou mais paradigmas
+
+- Praradigmas de Programação existentes:
+* POO
+* Programação Estruturada
+* Programação Imperativa
+* Programação Procedural
+* Programação Orientada a eventos
+* Programação Lógica
+
+- O C# possuí 6 paradigmas implementados
+
+
+##Abstração 
+
+- Abstração é abstrair um objeto do mundo real para um contexto específico, considerando apenas os atributos importantes 
+
+
+##Encapsulamento
+
+- O encapsulamento serve para proteger uma classe e definir limites para alteração de suas propriedades
+
+- Serve para ocultar seu comportamento e expor somente o necessário
+
+- Na simbologia o "+" significa que a ppropriedade é publica e o "-" significa que é privado
+
+- Público: Todo o código tem acesso, Private: Apenas a classe tem acesso
+
+- Ao digitar "ctor" e apertar tab é gerado automaticamente um construtor na classe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
