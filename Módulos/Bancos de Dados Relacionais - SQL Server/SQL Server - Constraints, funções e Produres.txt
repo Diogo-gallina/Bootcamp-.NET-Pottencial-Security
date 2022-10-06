@@ -1,0 +1,129 @@
+#SQL SERVER - Constraints, Funções e Procedures
+
+##Introdução Constraints
+
+- Constraints são regras que devem ser seguidas para permitir uma inserção em uma tabela. 
+Ex de Consraints:
+* NOT NULL - Não permite valor nulo
+* UNIQUE - Garante um valor unico em toda a tabela
+* CHECK - Garante determinada condição
+* DEFAUL - Valor padão para inserção
+* PRIMARY KEY - É uma combinação de Not Null e Unique
+* FOREIGN KEY - Garnte que um registro exista em outra tabela
+
+##Constraint NOT NULL
+
+- Nunable = "yes" significa que aceita valor nulo e "no" significa que não aceita
+
+- O NOT NULL - não permite um valor nulo, caso tenha ele retorna um erro
+
+
+##Constraint UNIQUE
+
+- Permite que um determinado valor seja unico em toda a tabela, ou seja não permite dados duplicados em uma coluna
+
+- Syntaxe Unique:
+ALTER TABLE "Nome da tabela"
+ADD CONSTRAINT "Nome que você pode colocar na constraint" UNIQUE("Nome da Coluna") 
+
+EX:
+ALTER TABLE Clientes
+ADD CONSTRAINT UNI_ColunaCPF UNIQUE(CPF)
+
+
+##Constraint CHECK
+
+- Verifica uma condição para inserção de dados
+
+- Syntaxe CHECK:
+ALTER TABLE "Nome da tabela"
+ADD CONSTRAINT "Nome que você pode colocar na constraint" CHECK("Condição") 
+
+EX:
+ALTER TABLE Profutos
+ADD CONSTRAINT CHK_ColunaGenero CHECK (Genhero = 'U' OR Genero = 'M' OR Genero = 'G')
+
+
+##Constraint DEFAULT
+
+- Assumi um valor padrão para uma coluna caso o valor seja omitido 
+
+- Syntaxe DEFAULT:
+
+- Syntaxe CHECK:
+ALTER TABLE "Nome da tabela"
+ADD CONSTRAINT "Nome que você pode colocar na constraint" DEFAULT "Valor que será usado" FOR "Nome da coluna"
+
+EX:
+ALTER TABLE Produtos
+ADD DEFAULT GETDATE() FOR DataCadastro
+
+
+##Apagando uma constraint
+
+- Ao selecionar uma tabela e clicar "Alt" + "f1" aparecerão todas as constraints da tabela
+
+- Para apagar bata clicar "Alt" + "f1" ir até as constraints copiar o nome da constraint que você deseja deletar e seguir a 
+seguinte syntaxe:
+
+ALTER TABle "Nome da tabela"
+DROP CONSTRAINT "Nome da Constraint"
+
+
+##Introdução Stored Produre
+
+- Store procedures são códigos SQL que você pode salvar diretamente no banco de dados, permitindo assim aproveitar um script 
+comumente usado
+
+- EX de procedure:
+
+CREATE PROCEDURE InserirNovoProduto
+@Nome varchar(255),
+@Cor varchar(50),
+@Preco decimal,
+@Tamanho varchar(5),
+@Genero char(1)
+
+AS
+
+INSERT INTO Produtos (Nome, Cor, Preco, Tamanho, Genero)
+VALUES (@Nome, @Cor, @Preco, @Tamanho, @Genero)
+
+- A procedure é como se fosse um método
+
+- Syntaxe para chamar e executar uma procedure:
+EXEC InserirNovoProduto "Seguir as condições da sua procedure"
+
+- Exemplo de Procedure com Select:
+
+CREATE PROCEDURE ObterProdutosPorTamanho
+@TamanhoProduto varchar(5)
+
+AS
+
+SELECT * FROM Produtos Where Tamanho = @TamanhoProduto
+
+
+##Functions
+
+- Functions são códigos SQL que pode salvar diretamente no banco de dados, semelhante a uma procedure, mas com usos especificos
+e limitações, como por exemplo, devem sempre ter um retorno e aceita apenas parametros de entrada
+
+- Syntaxe Function:
+CREATE FUNCTION "Nome da function"("Parametros")
+RETURNS "Tipo do retorno"
+
+BEGIN
+ RETURN "Condição" 
+END
+
+EX:
+CREATE FUNCTION CalcularDesconto(@Preco decimal(13,2), @Porcentagem int)
+RETURNS DECIMAl(13, 2)
+
+BEGIN
+ RETURN @Preco - @Preco/ 100 * @Porcentagem 
+END
+
+
+
